@@ -11,7 +11,7 @@
     /* 배경 흐림 효과 */
     body::before {
       content: "";
-      background: url('웹사이트 배경화면 2.jpg') no-repeat center center fixed;
+      background: url('back.jpg') no-repeat center center fixed;
       background-size: cover;
       position: fixed;
       top: 0;
