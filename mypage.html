@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./mypage.css">
+  <title>나의 소개</title>
+  
+  <script>
+    function toggleProfileImage() {
+      var img = document.getElementById("profile-img");
+      if (img.style.display === "none" || img.style.display === "") {
+        img.style.display = "block";
+        img.style.animation = "fadeInBackground 3s forwards";
+      } else {
+        img.style.display = "none";
+      }
+    }
+
+    function toggleSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <button id="profile-button" onclick="toggleProfileImage()">프로필 사진 보기</button>
+    <img src="프로필 사진.jpg" alt="프로필 사진" class="profile-img" id="profile-img">
+    <h1>자기소개</h1>
+    <p>안녕하세요! 웹 개발과 디자인에 관심이 많은 학생입니다.</p>
+  </header>
+
+  <section>
+    <h2 onclick="toggleSection('intro')">📌 소개</h2>
+    <div id="intro" class="content">
+      <p>청주대학교 인공지능소프트웨어학과에 재학 중인 한지성입니다.<br>
+        웹 개발과 디자인에 관심을 가지고 있으며 HTML, CSS를 배우고 있습니다.<br>
+        앞으로는 Java와 Python, 자율주행 시스템에 도전하고 싶습니다.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleSection('projects')">💼 프로젝트 / 관심사</h2>
+    <div id="projects" class="content">
+      <ul>
+        <li>HTML 응용하여 웹 사이트 만들기</li>
+        <li>C언어 Python 개발하여 레이더 수신기 만들기</li>
+        <li>자율운전 시스템 개발</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleSection('contact')">📬 연락처</h2>
+    <div id="contact" class="content">
+      <p>이메일: <a href="mailto:1124hanjisung@gmail.com">1124hanjisung@gmail.com</a></p>
+      <p>디스코드: <a href="https://discord.gg/Zbn3xP9wxU" target="_blank">discord.gg/Zbn3xP9wxU</a></p>
+      <p>카카오톡: <a href="https://open.kakao.com/o/srbqtBqh" target="_blank">https://open.kakao.com/o/srbqtBqh</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleSection('certifications')">📄 자격증</h2>
+    <div id="certifications" class="content">
+      <ul>
+        <li>ITQ 한글 A등급 (2023)</li>
+        <li>ITQ 엑셀 A등급 (2023)</li>
+        <li>컴퓨터응용밀링기능사 A등급 (2024)</li>
+        <li>CNC밀링가공_L3_22V2 A등급 (2024)</li>
+        <li>3톤미만 지게차</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
